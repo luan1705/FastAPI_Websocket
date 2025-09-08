@@ -1,0 +1,32 @@
+kéo code từ github về:
+./gitpull.sh
+
+đẩy code lên githubL:
+gitpush 'comment ở đây'
+
+
+Quay về bản cũ:
+
+Vào thư mục project:
+cd /www/server/FastAPI_Websocket
+
+Xem lịch sử commit để chọn bản muốn quay về:
+git log --oneline
+
+
+Ví dụ kết quả:
+dd914c3 First commit
+a1b2c3d Fix websocket bug
+4f5g6h7 Add new feature
+
+
+Quay về bản cũ:
+
+Nếu bạn muốn thư mục code trở về đúng như commit dd914c3 (First commit):
+
+git reset --hard dd914c3
+
+
+Nếu chỉ muốn xem thử code cũ (không ảnh hưởng GitHub), thì dùng:
+
+git checkout dd914c3
