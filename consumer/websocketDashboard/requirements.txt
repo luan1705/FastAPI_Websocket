@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+ssi-fc-data  # nếu bạn dùng thư viện này
+kafka-python
+confluent-kafka

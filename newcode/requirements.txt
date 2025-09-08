@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+
+# Streaming data
+ssi-fc-data
+
+# Data processing & DB
+pandas
+sqlalchemy
+psycopg2-binary
+orjson

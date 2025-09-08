@@ -1,0 +1,2 @@
+cd /www/server/FastAPI_Websocket/
+source venv/bin/activate
