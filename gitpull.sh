@@ -1,3 +1,5 @@
 #!/bin/bash
-git fetch origin main
-git reset --hard origin/main
+# Pull code mới từ GitHub mà không ghi đè thay đổi local
+cd $(pwd) || exit
+git pull origin main
+echo "Pulled latest code from GitHub (merge with local changes)"

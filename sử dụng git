@@ -1,32 +1,29 @@
-kéo code từ github về:
-./gitpull.sh
 
 đẩy code lên githubL:
 gitpush 'comment ở đây'
 
+5️⃣ Cách dùng gitpull
 
-Quay về bản cũ:
+Pull thông thường:
 
-Vào thư mục project:
-cd /www/server/FastAPI_Websocket
-
-Xem lịch sử commit để chọn bản muốn quay về:
-git log --oneline
+./gitpull.sh
 
 
-Ví dụ kết quả:
-dd914c3 First commit
-a1b2c3d Fix websocket bug
-4f5g6h7 Add new feature
+Pull mạnh, ghi đè local:
+
+./gitpull_hard.sh
 
 
-Quay về bản cũ:
+Pull + checkout commit/branch để test:
 
-Nếu bạn muốn thư mục code trở về đúng như commit dd914c3 (First commit):
-
-git reset --hard dd914c3
+./gitpull_checkout.sh <commit_id>
 
 
-Nếu chỉ muốn xem thử code cũ (không ảnh hưởng GitHub), thì dùng:
+Quay lại main sau khi checkout:
 
-git checkout dd914c3
+git checkout main
+
+
+Quay lại backup (nếu test commit cũ):
+
+git checkout backup-main
