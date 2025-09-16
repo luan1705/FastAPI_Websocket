@@ -5037,3 +5037,1728 @@ time="2025-09-10T01:58:01Z" level=warning msg="/www/server/FastAPI_Websocket/doc
  Container eboarddb  Recreated
  Container eboarddb  Starting
  Container eboarddb  Started
+time="2025-09-11T01:58:01Z" level=warning msg="/www/server/FastAPI_Websocket/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 393B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 577B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 6.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.10-slim@sha256:122c1a0e792fad67b870205fd0f5e4d6d0f6f3f13b2fce1b9472c1ecbe274671
+#5 resolve docker.io/library/python:3.10-slim@sha256:122c1a0e792fad67b870205fd0f5e4d6d0f6f3f13b2fce1b9472c1ecbe274671 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 423.62kB 0.0s done
+#6 DONE 0.0s
+
+#7 [2/6] RUN apt-get update && apt-get install -y tzdata     && ln -snf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime     && echo "Asia/Ho_Chi_Minh" > /etc/timezone     && apt-get clean
+#7 CACHED
+
+#8 [3/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] COPY . /app
+#9 DONE 0.0s
+
+#10 [5/6] RUN pip install --upgrade pip
+#10 1.721 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+#10 1.975 Collecting pip
+#10 2.118   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+#10 2.354      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 7.5 MB/s eta 0:00:00
+#10 2.438 Installing collected packages: pip
+#10 2.438   Attempting uninstall: pip
+#10 2.439     Found existing installation: pip 23.0.1
+#10 2.654     Uninstalling pip-23.0.1:
+#10 2.844       Successfully uninstalled pip-23.0.1
+#10 3.992 Successfully installed pip-25.2
+#10 3.992 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 4.4s
+
+#11 [6/6] RUN pip install -r /app/requirements.txt
+#11 0.994 Collecting fastapi (from -r /app/requirements.txt (line 1))
+#11 1.119   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+#11 1.414 Collecting ssi-fc-data (from -r /app/requirements.txt (line 5))
+#11 1.450   Downloading ssi_fc_data-2.2.2.tar.gz (11 kB)
+#11 1.489   Preparing metadata (setup.py): started
+#11 2.072   Preparing metadata (setup.py): finished with status 'done'
+#11 2.351 Collecting pandas (from -r /app/requirements.txt (line 8))
+#11 2.385   Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+#11 3.162 Collecting sqlalchemy (from -r /app/requirements.txt (line 9))
+#11 3.200   Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#11 3.431 Collecting psycopg2-binary (from -r /app/requirements.txt (line 10))
+#11 3.466   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 4.005 Collecting orjson (from -r /app/requirements.txt (line 11))
+#11 4.039   Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 4.118 Collecting uvicorn[standard] (from -r /app/requirements.txt (line 2))
+#11 4.150   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+#11 4.228 Collecting starlette<0.48.0,>=0.40.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.260   Downloading starlette-0.47.3-py3-none-any.whl.metadata (6.2 kB)
+#11 4.591 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.623   Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+#11 4.687 Collecting typing-extensions>=4.8.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.718   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 4.760 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 4.792   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#11 6.149 Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.181   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 6.228 Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.260   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+#11 6.324 Collecting anyio<5,>=3.6.2 (from starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.356   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+#11 6.411 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.444   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+#11 6.493 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.525   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#11 6.568 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.600   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 6.666 Collecting click>=7.0 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.697   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#11 6.741 Collecting h11>=0.8 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.773   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 6.862 Collecting httptools>=0.6.3 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.895   Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#11 6.965 Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.998   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+#11 7.135 Collecting pyyaml>=5.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.168   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#11 7.402 Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.436   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.676 Collecting watchfiles>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.711   Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.981 Collecting websockets>=10.4 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.014   Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 8.101 Collecting requests>=2.18.4 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.134   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 8.199 Collecting websocket-client>=1.5.2 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.231   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 8.698 Collecting numpy>=1.22.4 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.731   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#11 8.792 Collecting python-dateutil>=2.8.2 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.824   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 8.927 Collecting pytz>=2020.1 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.959   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 9.011 Collecting tzdata>=2022.7 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.043   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 9.402 Collecting greenlet>=1 (from sqlalchemy->-r /app/requirements.txt (line 9))
+#11 9.436   Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 9.502 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /app/requirements.txt (line 8))
+#11 9.534   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 9.727 Collecting charset_normalizer<4,>=2 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.760   Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+#11 9.847 Collecting urllib3<3,>=1.21.1 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.880   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 9.949 Collecting certifi>=2017.4.17 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.981   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+#11 10.07 Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+#11 10.11 Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
+#11 10.20 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+#11 10.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 10.4 MB/s  0:00:00
+#11 10.43 Downloading starlette-0.47.3-py3-none-any.whl (72 kB)
+#11 10.47 Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+#11 10.52 Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+#11 10.56 Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+#11 11.66    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 11.3 MB/s  0:00:01
+#11 11.69 Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#11 11.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 11.2 MB/s  0:00:00
+#11 12.01 Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#11 12.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 10.6 MB/s  0:00:00
+#11 12.33 Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+#11 12.38 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#11 12.41 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#11 12.46 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+#11 12.49 Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+#11 12.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 584.4/584.4 kB 10.6 MB/s  0:00:00
+#11 12.58 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 12.62 Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#11 12.70 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#11 12.74 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#11 14.21    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 11.4 MB/s  0:00:01
+#11 14.24 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 14.30 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+#11 14.33 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 14.41 Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#11 14.48    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 10.8 MB/s  0:00:00
+#11 14.51 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 14.56 Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+#11 14.61 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 14.65 Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+#11 14.70 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 14.74 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 14.78 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 14.81 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+#11 14.85 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 14.92 Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#11 15.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 11.3 MB/s  0:00:00
+#11 15.29 Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+#11 15.37 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 15.41 Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+#11 15.89 Building wheels for collected packages: ssi-fc-data
+#11 15.89   DEPRECATION: Building 'ssi-fc-data' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'ssi-fc-data'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+#11 15.89   Building wheel for ssi-fc-data (setup.py): started
+#11 16.33   Building wheel for ssi-fc-data (setup.py): finished with status 'done'
+#11 16.33   Created wheel for ssi-fc-data: filename=ssi_fc_data-2.2.2-py3-none-any.whl size=16374 sha256=34f9560f0f37ba4c0613a1ae2167c3b8cd108c67d16191eee98a74bc4414c15a
+#11 16.33   Stored in directory: /root/.cache/pip/wheels/7c/3b/6b/354db34eb5ce38cff6b53d401b08773ede2b81c867ced1474f
+#11 16.34 Successfully built ssi-fc-data
+#11 16.57 Installing collected packages: pytz, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, sniffio, six, pyyaml, python-dotenv, psycopg2-binary, orjson, numpy, idna, httptools, h11, greenlet, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, sqlalchemy, requests, python-dateutil, pydantic-core, exceptiongroup, ssi-fc-data, pydantic, pandas, anyio, watchfiles, starlette, fastapi
+#11 25.45 
+#11 25.46 Successfully installed annotated-types-0.7.0 anyio-4.10.0 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.2.1 exceptiongroup-1.3.0 fastapi-0.116.1 greenlet-3.2.4 h11-0.16.0 httptools-0.6.4 idna-3.10 numpy-2.2.6 orjson-3.11.3 pandas-2.3.2 psycopg2-binary-2.9.10 pydantic-2.11.7 pydantic-core-2.33.2 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 ssi-fc-data-2.2.2 starlette-0.47.3 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchfiles-1.1.0 websocket-client-1.8.0 websockets-15.0.1
+#11 25.46 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 26.1s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.8s done
+#12 writing image sha256:576dd1d6f2aec85c4a3647d76d12614aadf0df70f7784884b2a4b2d77a9e234e done
+#12 naming to docker.io/library/fastapi_websocket-eboarddb done
+#12 DONE 3.8s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ eboarddb  Built
+ Container eboarddb  Recreate
+ Container eboarddb  Recreated
+ Container eboarddb  Starting
+ Container eboarddb  Started
+time="2025-09-12T01:58:01Z" level=warning msg="/www/server/FastAPI_Websocket/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 393B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 577B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 3.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.10-slim@sha256:122c1a0e792fad67b870205fd0f5e4d6d0f6f3f13b2fce1b9472c1ecbe274671
+#5 resolve docker.io/library/python:3.10-slim@sha256:122c1a0e792fad67b870205fd0f5e4d6d0f6f3f13b2fce1b9472c1ecbe274671 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 440.07kB 0.0s done
+#6 DONE 0.0s
+
+#7 [2/6] RUN apt-get update && apt-get install -y tzdata     && ln -snf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime     && echo "Asia/Ho_Chi_Minh" > /etc/timezone     && apt-get clean
+#7 CACHED
+
+#8 [3/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] COPY . /app
+#9 DONE 0.0s
+
+#10 [5/6] RUN pip install --upgrade pip
+#10 1.940 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+#10 2.159 Collecting pip
+#10 2.301   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+#10 2.536      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 7.5 MB/s eta 0:00:00
+#10 2.618 Installing collected packages: pip
+#10 2.618   Attempting uninstall: pip
+#10 2.619     Found existing installation: pip 23.0.1
+#10 2.844     Uninstalling pip-23.0.1:
+#10 3.009       Successfully uninstalled pip-23.0.1
+#10 3.965 Successfully installed pip-25.2
+#10 3.966 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 4.3s
+
+#11 [6/6] RUN pip install -r /app/requirements.txt
+#11 1.024 Collecting fastapi (from -r /app/requirements.txt (line 1))
+#11 1.147   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+#11 1.421 Collecting ssi-fc-data (from -r /app/requirements.txt (line 5))
+#11 1.456   Downloading ssi_fc_data-2.2.2.tar.gz (11 kB)
+#11 1.481   Preparing metadata (setup.py): started
+#11 2.086   Preparing metadata (setup.py): finished with status 'done'
+#11 2.467 Collecting pandas (from -r /app/requirements.txt (line 8))
+#11 2.505   Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+#11 3.180 Collecting sqlalchemy (from -r /app/requirements.txt (line 9))
+#11 3.214   Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#11 3.395 Collecting psycopg2-binary (from -r /app/requirements.txt (line 10))
+#11 3.429   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 3.994 Collecting orjson (from -r /app/requirements.txt (line 11))
+#11 4.029   Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 4.110 Collecting uvicorn[standard] (from -r /app/requirements.txt (line 2))
+#11 4.142   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+#11 4.228 Collecting starlette<0.48.0,>=0.40.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.259   Downloading starlette-0.47.3-py3-none-any.whl.metadata (6.2 kB)
+#11 4.569 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.601   Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+#11 4.662 Collecting typing-extensions>=4.8.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.694   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 4.735 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 4.767   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#11 6.042 Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.084   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 6.132 Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.164   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+#11 6.230 Collecting anyio<5,>=3.6.2 (from starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.263   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+#11 6.319 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.350   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+#11 6.397 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.432   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#11 6.475 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.508   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 6.575 Collecting click>=7.0 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.608   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#11 6.651 Collecting h11>=0.8 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.683   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 6.799 Collecting httptools>=0.6.3 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.834   Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#11 6.905 Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.938   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+#11 7.074 Collecting pyyaml>=5.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.109   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#11 7.321 Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.356   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.614 Collecting watchfiles>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.648   Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.916 Collecting websockets>=10.4 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.950   Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 8.042 Collecting requests>=2.18.4 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.075   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 8.146 Collecting websocket-client>=1.5.2 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.179   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 8.660 Collecting numpy>=1.22.4 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.695   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#11 8.754 Collecting python-dateutil>=2.8.2 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.786   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 8.883 Collecting pytz>=2020.1 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.915   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 8.966 Collecting tzdata>=2022.7 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.998   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 9.365 Collecting greenlet>=1 (from sqlalchemy->-r /app/requirements.txt (line 9))
+#11 9.399   Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 9.466 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /app/requirements.txt (line 8))
+#11 9.499   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 9.697 Collecting charset_normalizer<4,>=2 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.729   Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+#11 9.852 Collecting urllib3<3,>=1.21.1 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.884   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 9.949 Collecting certifi>=2017.4.17 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.981   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+#11 10.07 Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+#11 10.11 Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
+#11 10.19 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+#11 10.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 10.3 MB/s  0:00:00
+#11 10.43 Downloading starlette-0.47.3-py3-none-any.whl (72 kB)
+#11 10.46 Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+#11 10.51 Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+#11 10.55 Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+#11 11.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 11.4 MB/s  0:00:01
+#11 11.67 Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#11 11.95    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 11.3 MB/s  0:00:00
+#11 11.99 Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#11 12.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 11.1 MB/s  0:00:00
+#11 12.29 Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+#11 12.34 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#11 12.38 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#11 12.42 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+#11 12.46 Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+#11 12.52    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 584.4/584.4 kB 10.7 MB/s  0:00:00
+#11 12.55 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 12.59 Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#11 12.66 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#11 12.70 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#11 14.18    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 11.4 MB/s  0:00:01
+#11 14.24 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 14.30 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+#11 14.34 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 14.42 Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#11 14.49    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 10.5 MB/s  0:00:00
+#11 14.52 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 14.56 Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+#11 14.61 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 14.65 Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+#11 14.70 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 14.74 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 14.78 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 14.82 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+#11 14.86 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 14.92 Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#11 15.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 11.3 MB/s  0:00:00
+#11 15.30 Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+#11 15.37 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 15.41 Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+#11 15.87 Building wheels for collected packages: ssi-fc-data
+#11 15.88   DEPRECATION: Building 'ssi-fc-data' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'ssi-fc-data'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+#11 15.88   Building wheel for ssi-fc-data (setup.py): started
+#11 16.30   Building wheel for ssi-fc-data (setup.py): finished with status 'done'
+#11 16.30   Created wheel for ssi-fc-data: filename=ssi_fc_data-2.2.2-py3-none-any.whl size=16374 sha256=2ba5cac51dff14f976f54d95d29084678ce97e19cc568c73b1f455df90893fd2
+#11 16.30   Stored in directory: /root/.cache/pip/wheels/7c/3b/6b/354db34eb5ce38cff6b53d401b08773ede2b81c867ced1474f
+#11 16.31 Successfully built ssi-fc-data
+#11 16.54 Installing collected packages: pytz, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, sniffio, six, pyyaml, python-dotenv, psycopg2-binary, orjson, numpy, idna, httptools, h11, greenlet, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, sqlalchemy, requests, python-dateutil, pydantic-core, exceptiongroup, ssi-fc-data, pydantic, pandas, anyio, watchfiles, starlette, fastapi
+#11 26.09 
+#11 26.10 Successfully installed annotated-types-0.7.0 anyio-4.10.0 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.2.1 exceptiongroup-1.3.0 fastapi-0.116.1 greenlet-3.2.4 h11-0.16.0 httptools-0.6.4 idna-3.10 numpy-2.2.6 orjson-3.11.3 pandas-2.3.2 psycopg2-binary-2.9.10 pydantic-2.11.7 pydantic-core-2.33.2 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 ssi-fc-data-2.2.2 starlette-0.47.3 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchfiles-1.1.0 websocket-client-1.8.0 websockets-15.0.1
+#11 26.10 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 26.7s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.6s done
+#12 writing image sha256:6ed281c507150f753dac6a72376d6feb670b42efc240cd362aa90a68f8f79365 done
+#12 naming to docker.io/library/fastapi_websocket-eboarddb done
+#12 DONE 3.6s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ eboarddb  Built
+ Container eboarddb  Running
+time="2025-09-13T01:58:01Z" level=warning msg="/www/server/FastAPI_Websocket/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 393B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 577B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 4.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.10-slim@sha256:122c1a0e792fad67b870205fd0f5e4d6d0f6f3f13b2fce1b9472c1ecbe274671
+#5 resolve docker.io/library/python:3.10-slim@sha256:122c1a0e792fad67b870205fd0f5e4d6d0f6f3f13b2fce1b9472c1ecbe274671 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 456.43kB 0.0s done
+#6 DONE 0.0s
+
+#7 [2/6] RUN apt-get update && apt-get install -y tzdata     && ln -snf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime     && echo "Asia/Ho_Chi_Minh" > /etc/timezone     && apt-get clean
+#7 CACHED
+
+#8 [3/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] COPY . /app
+#9 DONE 0.0s
+
+#10 [5/6] RUN pip install --upgrade pip
+#10 1.973 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+#10 2.210 Collecting pip
+#10 2.331   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+#10 2.568      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 7.5 MB/s eta 0:00:00
+#10 2.649 Installing collected packages: pip
+#10 2.649   Attempting uninstall: pip
+#10 2.650     Found existing installation: pip 23.0.1
+#10 3.057     Uninstalling pip-23.0.1:
+#10 3.290       Successfully uninstalled pip-23.0.1
+#10 4.313 Successfully installed pip-25.2
+#10 4.313 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 4.6s
+
+#11 [6/6] RUN pip install -r /app/requirements.txt
+#11 1.300 Collecting fastapi (from -r /app/requirements.txt (line 1))
+#11 1.432   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+#11 1.774 Collecting ssi-fc-data (from -r /app/requirements.txt (line 5))
+#11 1.813   Downloading ssi_fc_data-2.2.2.tar.gz (11 kB)
+#11 1.851   Preparing metadata (setup.py): started
+#11 2.436   Preparing metadata (setup.py): finished with status 'done'
+#11 2.711 Collecting pandas (from -r /app/requirements.txt (line 8))
+#11 2.746   Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+#11 3.578 Collecting sqlalchemy (from -r /app/requirements.txt (line 9))
+#11 3.614   Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#11 3.793 Collecting psycopg2-binary (from -r /app/requirements.txt (line 10))
+#11 3.833   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 4.314 Collecting orjson (from -r /app/requirements.txt (line 11))
+#11 4.352   Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 4.434 Collecting uvicorn[standard] (from -r /app/requirements.txt (line 2))
+#11 4.466   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+#11 4.549 Collecting starlette<0.48.0,>=0.40.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.581   Downloading starlette-0.47.3-py3-none-any.whl.metadata (6.2 kB)
+#11 4.924 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.957   Downloading pydantic-2.11.8-py3-none-any.whl.metadata (68 kB)
+#11 5.025 Collecting typing-extensions>=4.8.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 5.058   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 5.110 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 5.144   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#11 6.361 Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.393   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 6.445 Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.477   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+#11 6.544 Collecting anyio<5,>=3.6.2 (from starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.576   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+#11 6.638 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.671   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+#11 6.730 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.769   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#11 6.816 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.848   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 6.917 Collecting click>=7.0 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.949   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#11 6.997 Collecting h11>=0.8 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.029   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 7.141 Collecting httptools>=0.6.3 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.175   Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#11 7.232 Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.264   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+#11 7.361 Collecting pyyaml>=5.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.393   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#11 7.536 Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.569   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.757 Collecting watchfiles>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.790   Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 8.018 Collecting websockets>=10.4 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.052   Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 8.132 Collecting requests>=2.18.4 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.164   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 8.227 Collecting websocket-client>=1.5.2 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.260   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 8.640 Collecting numpy>=1.22.4 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.674   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#11 8.733 Collecting python-dateutil>=2.8.2 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.764   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 8.859 Collecting pytz>=2020.1 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.892   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 8.945 Collecting tzdata>=2022.7 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.978   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 9.373 Collecting greenlet>=1 (from sqlalchemy->-r /app/requirements.txt (line 9))
+#11 9.409   Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 9.487 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /app/requirements.txt (line 8))
+#11 9.522   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 9.710 Collecting charset_normalizer<4,>=2 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.744   Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+#11 9.835 Collecting urllib3<3,>=1.21.1 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.867   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 9.933 Collecting certifi>=2017.4.17 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.966   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+#11 10.04 Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+#11 10.09 Downloading pydantic-2.11.8-py3-none-any.whl (444 kB)
+#11 10.17 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+#11 10.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 11.3 MB/s  0:00:00
+#11 10.39 Downloading starlette-0.47.3-py3-none-any.whl (72 kB)
+#11 10.43 Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+#11 10.47 Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+#11 10.51 Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+#11 11.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 11.4 MB/s  0:00:01
+#11 11.63 Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#11 11.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 11.4 MB/s  0:00:00
+#11 11.95 Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#11 12.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 11.2 MB/s  0:00:00
+#11 12.26 Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+#11 12.31 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#11 12.34 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#11 12.39 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+#11 12.42 Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+#11 12.48    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 584.4/584.4 kB 10.7 MB/s  0:00:00
+#11 12.51 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 12.56 Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#11 12.63 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#11 12.67 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#11 14.15    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 11.4 MB/s  0:00:01
+#11 14.18 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 14.24 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+#11 14.27 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 14.35 Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#11 14.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 11.3 MB/s  0:00:00
+#11 14.46 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 14.50 Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+#11 14.55 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 14.59 Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+#11 14.64 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 14.68 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 14.72 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 14.76 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+#11 14.80 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 14.86 Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#11 15.20    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 11.4 MB/s  0:00:00
+#11 15.24 Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+#11 15.32 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 15.35 Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+#11 15.58 Building wheels for collected packages: ssi-fc-data
+#11 15.58   DEPRECATION: Building 'ssi-fc-data' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'ssi-fc-data'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+#11 15.58   Building wheel for ssi-fc-data (setup.py): started
+#11 16.01   Building wheel for ssi-fc-data (setup.py): finished with status 'done'
+#11 16.01   Created wheel for ssi-fc-data: filename=ssi_fc_data-2.2.2-py3-none-any.whl size=16374 sha256=4cc3ad3a1c884aecd378289f7ec09d4bb066761282c0dc70ac577126ef8c6b41
+#11 16.01   Stored in directory: /root/.cache/pip/wheels/7c/3b/6b/354db34eb5ce38cff6b53d401b08773ede2b81c867ced1474f
+#11 16.01 Successfully built ssi-fc-data
+#11 16.22 Installing collected packages: pytz, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, sniffio, six, pyyaml, python-dotenv, psycopg2-binary, orjson, numpy, idna, httptools, h11, greenlet, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, sqlalchemy, requests, python-dateutil, pydantic-core, exceptiongroup, ssi-fc-data, pydantic, pandas, anyio, watchfiles, starlette, fastapi
+#11 24.70 
+#11 24.71 Successfully installed annotated-types-0.7.0 anyio-4.10.0 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.2.1 exceptiongroup-1.3.0 fastapi-0.116.1 greenlet-3.2.4 h11-0.16.0 httptools-0.6.4 idna-3.10 numpy-2.2.6 orjson-3.11.3 pandas-2.3.2 psycopg2-binary-2.9.10 pydantic-2.11.8 pydantic-core-2.33.2 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 ssi-fc-data-2.2.2 starlette-0.47.3 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchfiles-1.1.0 websocket-client-1.8.0 websockets-15.0.1
+#11 24.71 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 25.3s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.6s done
+#12 writing image sha256:d6b8d66f6e04323677a03279c8bd47b0d15755cedc24a900249c75f134366002 done
+#12 naming to docker.io/library/fastapi_websocket-eboarddb done
+#12 DONE 3.6s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ eboarddb  Built
+ Container eboarddb  Recreate
+ Container eboarddb  Recreated
+ Container eboarddb  Starting
+ Container eboarddb  Started
+time="2025-09-13T05:59:01Z" level=warning msg="/www/server/FastAPI_Websocket/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 393B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 577B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 3.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.10-slim@sha256:122c1a0e792fad67b870205fd0f5e4d6d0f6f3f13b2fce1b9472c1ecbe274671
+#5 resolve docker.io/library/python:3.10-slim@sha256:122c1a0e792fad67b870205fd0f5e4d6d0f6f3f13b2fce1b9472c1ecbe274671 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 472.88kB 0.0s done
+#6 DONE 0.0s
+
+#7 [2/6] RUN apt-get update && apt-get install -y tzdata     && ln -snf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime     && echo "Asia/Ho_Chi_Minh" > /etc/timezone     && apt-get clean
+#7 CACHED
+
+#8 [3/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] COPY . /app
+#9 DONE 0.0s
+
+#10 [5/6] RUN pip install --upgrade pip
+#10 1.829 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+#10 2.050 Collecting pip
+#10 2.163   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+#10 2.396      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 7.6 MB/s eta 0:00:00
+#10 2.478 Installing collected packages: pip
+#10 2.478   Attempting uninstall: pip
+#10 2.479     Found existing installation: pip 23.0.1
+#10 2.668     Uninstalling pip-23.0.1:
+#10 2.845       Successfully uninstalled pip-23.0.1
+#10 3.771 Successfully installed pip-25.2
+#10 3.771 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 4.1s
+
+#11 [6/6] RUN pip install -r /app/requirements.txt
+#11 1.166 Collecting fastapi (from -r /app/requirements.txt (line 1))
+#11 1.303   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+#11 1.619 Collecting ssi-fc-data (from -r /app/requirements.txt (line 5))
+#11 1.661   Downloading ssi_fc_data-2.2.2.tar.gz (11 kB)
+#11 1.699   Preparing metadata (setup.py): started
+#11 2.257   Preparing metadata (setup.py): finished with status 'done'
+#11 2.542 Collecting pandas (from -r /app/requirements.txt (line 8))
+#11 2.579   Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+#11 3.268 Collecting sqlalchemy (from -r /app/requirements.txt (line 9))
+#11 3.315   Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#11 3.502 Collecting psycopg2-binary (from -r /app/requirements.txt (line 10))
+#11 3.542   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 4.057 Collecting orjson (from -r /app/requirements.txt (line 11))
+#11 4.103   Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 4.190 Collecting uvicorn[standard] (from -r /app/requirements.txt (line 2))
+#11 4.227   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+#11 4.312 Collecting starlette<0.48.0,>=0.40.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.348   Downloading starlette-0.47.3-py3-none-any.whl.metadata (6.2 kB)
+#11 4.697 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.734   Downloading pydantic-2.11.8-py3-none-any.whl.metadata (68 kB)
+#11 4.808 Collecting typing-extensions>=4.8.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.844   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 4.896 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 4.934   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#11 6.379 Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.417   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 6.474 Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.511   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+#11 6.587 Collecting anyio<5,>=3.6.2 (from starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.623   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+#11 6.687 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.724   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+#11 6.782 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.818   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#11 6.869 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.906   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 6.980 Collecting click>=7.0 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.029   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#11 7.088 Collecting h11>=0.8 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.126   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 7.261 Collecting httptools>=0.6.3 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.299   Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#11 7.368 Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.405   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+#11 7.511 Collecting pyyaml>=5.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.547   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#11 7.718 Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.756   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.933 Collecting watchfiles>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.969   Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 8.183 Collecting websockets>=10.4 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.227   Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 8.316 Collecting requests>=2.18.4 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.353   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 8.434 Collecting websocket-client>=1.5.2 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.471   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 8.968 Collecting numpy>=1.22.4 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.007   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#11 9.086 Collecting python-dateutil>=2.8.2 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.122   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 9.224 Collecting pytz>=2020.1 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.260   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 9.319 Collecting tzdata>=2022.7 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.356   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 9.723 Collecting greenlet>=1 (from sqlalchemy->-r /app/requirements.txt (line 9))
+#11 9.762   Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 9.840 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /app/requirements.txt (line 8))
+#11 9.879   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 10.10 Collecting charset_normalizer<4,>=2 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 10.13   Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+#11 10.23 Collecting urllib3<3,>=1.21.1 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 10.27   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 10.34 Collecting certifi>=2017.4.17 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 10.38   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+#11 10.46 Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+#11 10.51 Downloading pydantic-2.11.8-py3-none-any.whl (444 kB)
+#11 10.61 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+#11 10.82    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 9.6 MB/s  0:00:00
+#11 10.85 Downloading starlette-0.47.3-py3-none-any.whl (72 kB)
+#11 10.90 Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+#11 10.94 Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+#11 10.98 Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+#11 12.07    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 11.4 MB/s  0:00:01
+#11 12.11 Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#11 12.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 11.5 MB/s  0:00:00
+#11 12.43 Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#11 12.70    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 11.3 MB/s  0:00:00
+#11 12.74 Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+#11 12.79 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#11 12.83 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#11 12.88 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+#11 12.93 Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+#11 12.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 584.4/584.4 kB 10.6 MB/s  0:00:00
+#11 13.03 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 13.08 Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#11 13.16 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#11 13.21 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#11 14.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 11.4 MB/s  0:00:01
+#11 14.73 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 14.79 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+#11 14.82 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 14.91 Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#11 14.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 10.8 MB/s  0:00:00
+#11 15.01 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 15.06 Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+#11 15.12 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 15.17 Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+#11 15.22 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 15.26 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 15.30 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 15.34 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+#11 15.38 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 15.45 Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#11 15.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 11.3 MB/s  0:00:00
+#11 15.83 Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+#11 15.91 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 15.95 Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+#11 16.22 Building wheels for collected packages: ssi-fc-data
+#11 16.22   DEPRECATION: Building 'ssi-fc-data' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'ssi-fc-data'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+#11 16.22   Building wheel for ssi-fc-data (setup.py): started
+#11 16.64   Building wheel for ssi-fc-data (setup.py): finished with status 'done'
+#11 16.64   Created wheel for ssi-fc-data: filename=ssi_fc_data-2.2.2-py3-none-any.whl size=16374 sha256=01927a5bf0649b1f278c60db3f65cf9cc8f17c72ce30778cf46de401d2103224
+#11 16.64   Stored in directory: /root/.cache/pip/wheels/7c/3b/6b/354db34eb5ce38cff6b53d401b08773ede2b81c867ced1474f
+#11 16.65 Successfully built ssi-fc-data
+#11 16.87 Installing collected packages: pytz, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, sniffio, six, pyyaml, python-dotenv, psycopg2-binary, orjson, numpy, idna, httptools, h11, greenlet, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, sqlalchemy, requests, python-dateutil, pydantic-core, exceptiongroup, ssi-fc-data, pydantic, pandas, anyio, watchfiles, starlette, fastapi
+#11 26.26 
+#11 26.27 Successfully installed annotated-types-0.7.0 anyio-4.10.0 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.2.1 exceptiongroup-1.3.0 fastapi-0.116.1 greenlet-3.2.4 h11-0.16.0 httptools-0.6.4 idna-3.10 numpy-2.2.6 orjson-3.11.3 pandas-2.3.2 psycopg2-binary-2.9.10 pydantic-2.11.8 pydantic-core-2.33.2 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 ssi-fc-data-2.2.2 starlette-0.47.3 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchfiles-1.1.0 websocket-client-1.8.0 websockets-15.0.1
+#11 26.27 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 27.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.7s done
+#12 writing image sha256:3d02612252ed652aee5bf6e5d0ab6abdb202725fcff9f11fedab9b3caaff1534 done
+#12 naming to docker.io/library/fastapi_websocket-eboarddb done
+#12 DONE 3.7s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ eboarddb  Built
+ Container eboarddb  Recreate
+ Container eboarddb  Recreated
+ Container eboarddb  Starting
+ Container eboarddb  Started
+time="2025-09-14T01:58:04Z" level=warning msg="/www/server/FastAPI_Websocket/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 393B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 577B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 2.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730
+#5 resolve docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 489.33kB 0.0s done
+#6 DONE 0.0s
+
+#7 [2/6] RUN apt-get update && apt-get install -y tzdata     && ln -snf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime     && echo "Asia/Ho_Chi_Minh" > /etc/timezone     && apt-get clean
+#7 CACHED
+
+#8 [3/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] COPY . /app
+#9 DONE 0.0s
+
+#10 [5/6] RUN pip install --upgrade pip
+#10 2.089 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+#10 2.323 Collecting pip
+#10 2.469   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+#10 2.739      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 6.5 MB/s eta 0:00:00
+#10 2.799 Installing collected packages: pip
+#10 2.799   Attempting uninstall: pip
+#10 2.800     Found existing installation: pip 23.0.1
+#10 2.984     Uninstalling pip-23.0.1:
+#10 3.166       Successfully uninstalled pip-23.0.1
+#10 4.042 Successfully installed pip-25.2
+#10 4.042 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 4.4s
+
+#11 [6/6] RUN pip install -r /app/requirements.txt
+#11 1.269 Collecting fastapi (from -r /app/requirements.txt (line 1))
+#11 1.391   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+#11 1.706 Collecting ssi-fc-data (from -r /app/requirements.txt (line 5))
+#11 1.740   Downloading ssi_fc_data-2.2.2.tar.gz (11 kB)
+#11 1.778   Preparing metadata (setup.py): started
+#11 2.341   Preparing metadata (setup.py): finished with status 'done'
+#11 2.643 Collecting pandas (from -r /app/requirements.txt (line 8))
+#11 2.678   Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+#11 3.577 Collecting sqlalchemy (from -r /app/requirements.txt (line 9))
+#11 3.612   Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#11 3.796 Collecting psycopg2-binary (from -r /app/requirements.txt (line 10))
+#11 3.828   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 4.466 Collecting orjson (from -r /app/requirements.txt (line 11))
+#11 4.501   Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 4.587 Collecting uvicorn[standard] (from -r /app/requirements.txt (line 2))
+#11 4.620   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+#11 4.702 Collecting starlette<0.48.0,>=0.40.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.735   Downloading starlette-0.47.3-py3-none-any.whl.metadata (6.2 kB)
+#11 5.097 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r /app/requirements.txt (line 1))
+#11 5.130   Downloading pydantic-2.11.9-py3-none-any.whl.metadata (68 kB)
+#11 5.194 Collecting typing-extensions>=4.8.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 5.226   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 5.268 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 5.301   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#11 6.671 Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.705   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 6.752 Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.793   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+#11 6.859 Collecting anyio<5,>=3.6.2 (from starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.891   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+#11 6.946 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.978   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+#11 7.025 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 7.063   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#11 7.105 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 7.137   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 7.201 Collecting click>=7.0 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.232   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#11 7.275 Collecting h11>=0.8 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.307   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 7.392 Collecting httptools>=0.6.3 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.425   Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#11 7.478 Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.511   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+#11 7.641 Collecting pyyaml>=5.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.674   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#11 7.893 Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.928   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 8.166 Collecting watchfiles>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.201   Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 8.485 Collecting websockets>=10.4 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.520   Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 8.603 Collecting requests>=2.18.4 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.635   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 8.697 Collecting websocket-client>=1.5.2 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.730   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 9.145 Collecting numpy>=1.22.4 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.179   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#11 9.234 Collecting python-dateutil>=2.8.2 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.266   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 9.360 Collecting pytz>=2020.1 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.393   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 9.443 Collecting tzdata>=2022.7 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.475   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 9.876 Collecting greenlet>=1 (from sqlalchemy->-r /app/requirements.txt (line 9))
+#11 9.909   Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 9.981 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /app/requirements.txt (line 8))
+#11 10.01   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 10.20 Collecting charset_normalizer<4,>=2 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 10.23   Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+#11 10.32 Collecting urllib3<3,>=1.21.1 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 10.35   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 10.41 Collecting certifi>=2017.4.17 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 10.44   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+#11 10.53 Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+#11 10.57 Downloading pydantic-2.11.9-py3-none-any.whl (444 kB)
+#11 10.66 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+#11 10.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 10.4 MB/s  0:00:00
+#11 10.88 Downloading starlette-0.47.3-py3-none-any.whl (72 kB)
+#11 10.92 Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+#11 10.96 Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+#11 11.00 Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+#11 12.09    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 11.4 MB/s  0:00:01
+#11 12.12 Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#11 12.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 11.5 MB/s  0:00:00
+#11 12.44 Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#11 12.73    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 10.7 MB/s  0:00:00
+#11 12.76 Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+#11 12.81 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#11 12.84 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#11 12.89 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+#11 12.93 Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+#11 12.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 584.4/584.4 kB 10.6 MB/s  0:00:00
+#11 13.01 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 13.06 Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#11 13.13 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#11 13.17 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#11 14.65    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 11.4 MB/s  0:00:01
+#11 14.68 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 14.73 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+#11 14.77 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 14.85 Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#11 14.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 10.7 MB/s  0:00:00
+#11 14.95 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 14.99 Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+#11 15.04 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 15.08 Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+#11 15.13 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 15.17 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 15.20 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 15.24 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+#11 15.27 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 15.34 Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#11 15.68    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 11.3 MB/s  0:00:00
+#11 15.72 Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+#11 15.79 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 15.83 Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+#11 16.31 Building wheels for collected packages: ssi-fc-data
+#11 16.32   DEPRECATION: Building 'ssi-fc-data' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'ssi-fc-data'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+#11 16.32   Building wheel for ssi-fc-data (setup.py): started
+#11 16.74   Building wheel for ssi-fc-data (setup.py): finished with status 'done'
+#11 16.74   Created wheel for ssi-fc-data: filename=ssi_fc_data-2.2.2-py3-none-any.whl size=16374 sha256=8bddcda744b57c7cc64e54fb2cff5168197ac7cebffd2d8f3b59de058dc07a98
+#11 16.74   Stored in directory: /root/.cache/pip/wheels/7c/3b/6b/354db34eb5ce38cff6b53d401b08773ede2b81c867ced1474f
+#11 16.74 Successfully built ssi-fc-data
+#11 16.97 Installing collected packages: pytz, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, sniffio, six, pyyaml, python-dotenv, psycopg2-binary, orjson, numpy, idna, httptools, h11, greenlet, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, sqlalchemy, requests, python-dateutil, pydantic-core, exceptiongroup, ssi-fc-data, pydantic, pandas, anyio, watchfiles, starlette, fastapi
+#11 26.52 
+#11 26.53 Successfully installed annotated-types-0.7.0 anyio-4.10.0 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.2.1 exceptiongroup-1.3.0 fastapi-0.116.1 greenlet-3.2.4 h11-0.16.0 httptools-0.6.4 idna-3.10 numpy-2.2.6 orjson-3.11.3 pandas-2.3.2 psycopg2-binary-2.9.10 pydantic-2.11.9 pydantic-core-2.33.2 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 ssi-fc-data-2.2.2 starlette-0.47.3 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchfiles-1.1.0 websocket-client-1.8.0 websockets-15.0.1
+#11 26.53 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 27.3s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.6s done
+#12 writing image sha256:bc7b1eb0ddc79de6ed7b45be73f1d0652096a8a616ca00ee0b765dbf400f1769 done
+#12 naming to docker.io/library/fastapi_websocket-eboarddb done
+#12 DONE 3.6s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ eboarddb  Built
+ Container eboarddb  Recreate
+ Container eboarddb  Recreated
+ Container eboarddb  Starting
+ Container eboarddb  Started
+time="2025-09-14T05:59:02Z" level=warning msg="/www/server/FastAPI_Websocket/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 393B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 577B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 5.9s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730
+#5 resolve docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 505.79kB 0.0s done
+#6 DONE 0.0s
+
+#7 [2/6] RUN apt-get update && apt-get install -y tzdata     && ln -snf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime     && echo "Asia/Ho_Chi_Minh" > /etc/timezone     && apt-get clean
+#7 CACHED
+
+#8 [3/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] COPY . /app
+#9 DONE 0.0s
+
+#10 [5/6] RUN pip install --upgrade pip
+#10 1.866 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+#10 2.129 Collecting pip
+#10 2.285   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+#10 2.566      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 6.3 MB/s eta 0:00:00
+#10 2.630 Installing collected packages: pip
+#10 2.630   Attempting uninstall: pip
+#10 2.631     Found existing installation: pip 23.0.1
+#10 2.830     Uninstalling pip-23.0.1:
+#10 3.017       Successfully uninstalled pip-23.0.1
+#10 3.997 Successfully installed pip-25.2
+#10 3.998 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 4.3s
+
+#11 [6/6] RUN pip install -r /app/requirements.txt
+#11 1.084 Collecting fastapi (from -r /app/requirements.txt (line 1))
+#11 1.209   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+#11 1.268 Collecting ssi-fc-data (from -r /app/requirements.txt (line 5))
+#11 1.304   Downloading ssi_fc_data-2.2.2.tar.gz (11 kB)
+#11 1.325   Preparing metadata (setup.py): started
+#11 2.305   Preparing metadata (setup.py): finished with status 'done'
+#11 2.597 Collecting pandas (from -r /app/requirements.txt (line 8))
+#11 2.633   Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+#11 3.293 Collecting sqlalchemy (from -r /app/requirements.txt (line 9))
+#11 3.327   Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#11 3.509 Collecting psycopg2-binary (from -r /app/requirements.txt (line 10))
+#11 3.543   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 4.069 Collecting orjson (from -r /app/requirements.txt (line 11))
+#11 4.103   Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 4.181 Collecting uvicorn[standard] (from -r /app/requirements.txt (line 2))
+#11 4.214   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+#11 4.292 Collecting starlette<0.48.0,>=0.40.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.326   Downloading starlette-0.47.3-py3-none-any.whl.metadata (6.2 kB)
+#11 4.637 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.671   Downloading pydantic-2.11.9-py3-none-any.whl.metadata (68 kB)
+#11 4.734 Collecting typing-extensions>=4.8.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.766   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 4.807 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 4.840   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#11 6.163 Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.198   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 6.245 Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.276   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+#11 6.340 Collecting anyio<5,>=3.6.2 (from starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.372   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+#11 6.427 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.462   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+#11 6.510 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.542   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#11 6.584 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.616   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 6.682 Collecting click>=7.0 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.714   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#11 6.758 Collecting h11>=0.8 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.790   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 6.880 Collecting httptools>=0.6.3 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.913   Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#11 6.981 Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.015   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+#11 7.148 Collecting pyyaml>=5.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.185   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#11 7.412 Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.448   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.677 Collecting watchfiles>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.712   Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.988 Collecting websockets>=10.4 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.022   Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 8.106 Collecting requests>=2.18.4 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.139   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 8.204 Collecting websocket-client>=1.5.2 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.237   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 8.715 Collecting numpy>=1.22.4 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.750   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#11 8.808 Collecting python-dateutil>=2.8.2 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.843   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 8.944 Collecting pytz>=2020.1 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.979   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 9.028 Collecting tzdata>=2022.7 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.060   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 9.405 Collecting greenlet>=1 (from sqlalchemy->-r /app/requirements.txt (line 9))
+#11 9.440   Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 9.503 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /app/requirements.txt (line 8))
+#11 9.536   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 9.738 Collecting charset_normalizer<4,>=2 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.771   Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+#11 9.858 Collecting urllib3<3,>=1.21.1 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.891   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 9.955 Collecting certifi>=2017.4.17 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.988   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+#11 10.07 Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+#11 10.12 Downloading pydantic-2.11.9-py3-none-any.whl (444 kB)
+#11 10.21 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+#11 10.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 10.3 MB/s  0:00:00
+#11 10.45 Downloading starlette-0.47.3-py3-none-any.whl (72 kB)
+#11 10.49 Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+#11 10.53 Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+#11 10.57 Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+#11 11.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 11.3 MB/s  0:00:01
+#11 11.70 Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#11 11.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 11.2 MB/s  0:00:00
+#11 12.02 Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#11 12.31    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 10.3 MB/s  0:00:00
+#11 12.35 Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+#11 12.39 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#11 12.43 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#11 12.48 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+#11 12.53 Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+#11 12.58    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 584.4/584.4 kB 10.6 MB/s  0:00:00
+#11 12.61 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 12.65 Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#11 12.72 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#11 12.76 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#11 14.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 11.4 MB/s  0:00:01
+#11 14.27 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 14.33 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+#11 14.36 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 14.44 Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#11 14.51    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 10.8 MB/s  0:00:00
+#11 14.55 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 14.59 Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+#11 14.64 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 14.68 Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+#11 14.73 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 14.77 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 14.81 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 14.85 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+#11 14.89 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 14.95 Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#11 15.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 11.4 MB/s  0:00:00
+#11 15.32 Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+#11 15.40 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 15.44 Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+#11 15.92 Building wheels for collected packages: ssi-fc-data
+#11 15.92   DEPRECATION: Building 'ssi-fc-data' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'ssi-fc-data'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+#11 15.92   Building wheel for ssi-fc-data (setup.py): started
+#11 16.36   Building wheel for ssi-fc-data (setup.py): finished with status 'done'
+#11 16.36   Created wheel for ssi-fc-data: filename=ssi_fc_data-2.2.2-py3-none-any.whl size=16374 sha256=0b54be071882f9cb4c6ac3d61e11174dd4210b4aeb799402bb7960f5d71cfe1d
+#11 16.36   Stored in directory: /root/.cache/pip/wheels/7c/3b/6b/354db34eb5ce38cff6b53d401b08773ede2b81c867ced1474f
+#11 16.36 Successfully built ssi-fc-data
+#11 16.60 Installing collected packages: pytz, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, sniffio, six, pyyaml, python-dotenv, psycopg2-binary, orjson, numpy, idna, httptools, h11, greenlet, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, sqlalchemy, requests, python-dateutil, pydantic-core, exceptiongroup, ssi-fc-data, pydantic, pandas, anyio, watchfiles, starlette, fastapi
+#11 25.57 
+#11 25.58 Successfully installed annotated-types-0.7.0 anyio-4.10.0 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.2.1 exceptiongroup-1.3.0 fastapi-0.116.1 greenlet-3.2.4 h11-0.16.0 httptools-0.6.4 idna-3.10 numpy-2.2.6 orjson-3.11.3 pandas-2.3.2 psycopg2-binary-2.9.10 pydantic-2.11.9 pydantic-core-2.33.2 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 ssi-fc-data-2.2.2 starlette-0.47.3 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchfiles-1.1.0 websocket-client-1.8.0 websockets-15.0.1
+#11 25.58 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 26.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.8s done
+#12 writing image sha256:c52194d3e80626d20eedfa698fe37a6d581c0af9ba1821739a98b6dd5d22be0b done
+#12 naming to docker.io/library/fastapi_websocket-eboarddb done
+#12 DONE 3.8s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ eboarddb  Built
+ Container eboarddb  Recreate
+ Container eboarddb  Recreated
+ Container eboarddb  Starting
+ Container eboarddb  Started
+time="2025-09-15T08:58:01+07:00" level=warning msg="/www/server/FastAPI_Websocket/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 393B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 577B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 5.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730
+#5 resolve docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 522.24kB 0.0s done
+#6 DONE 0.0s
+
+#7 [2/6] RUN apt-get update && apt-get install -y tzdata     && ln -snf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime     && echo "Asia/Ho_Chi_Minh" > /etc/timezone     && apt-get clean
+#7 CACHED
+
+#8 [3/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] COPY . /app
+#9 DONE 0.0s
+
+#10 [5/6] RUN pip install --upgrade pip
+#10 2.537 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+#10 2.761 Collecting pip
+#10 2.879   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+#10 3.116      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 7.5 MB/s eta 0:00:00
+#10 3.183 Installing collected packages: pip
+#10 3.183   Attempting uninstall: pip
+#10 3.184     Found existing installation: pip 23.0.1
+#10 3.413     Uninstalling pip-23.0.1:
+#10 3.638       Successfully uninstalled pip-23.0.1
+#10 4.699 Successfully installed pip-25.2
+#10 4.700 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 5.0s
+
+#11 [6/6] RUN pip install -r /app/requirements.txt
+#11 1.012 Collecting fastapi (from -r /app/requirements.txt (line 1))
+#11 1.132   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+#11 1.199 Collecting ssi-fc-data (from -r /app/requirements.txt (line 5))
+#11 1.234   Downloading ssi_fc_data-2.2.2.tar.gz (11 kB)
+#11 1.254   Preparing metadata (setup.py): started
+#11 1.772   Preparing metadata (setup.py): finished with status 'done'
+#11 2.030 Collecting pandas (from -r /app/requirements.txt (line 8))
+#11 2.064   Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+#11 2.698 Collecting sqlalchemy (from -r /app/requirements.txt (line 9))
+#11 2.743   Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#11 2.945 Collecting psycopg2-binary (from -r /app/requirements.txt (line 10))
+#11 2.978   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 3.496 Collecting orjson (from -r /app/requirements.txt (line 11))
+#11 3.530   Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 3.607 Collecting uvicorn[standard] (from -r /app/requirements.txt (line 2))
+#11 3.639   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+#11 3.722 Collecting starlette<0.48.0,>=0.40.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 3.755   Downloading starlette-0.47.3-py3-none-any.whl.metadata (6.2 kB)
+#11 4.094 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.127   Downloading pydantic-2.11.9-py3-none-any.whl.metadata (68 kB)
+#11 4.190 Collecting typing-extensions>=4.8.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.223   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 4.265 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 4.297   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#11 5.583 Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 5.616   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 5.662 Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 5.694   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+#11 5.756 Collecting anyio<5,>=3.6.2 (from starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 5.789   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+#11 5.849 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 5.883   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+#11 5.931 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 5.963   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#11 6.006 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.048   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 6.115 Collecting click>=7.0 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.152   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#11 6.196 Collecting h11>=0.8 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.230   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 6.351 Collecting httptools>=0.6.3 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.387   Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#11 6.459 Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.493   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+#11 6.634 Collecting pyyaml>=5.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.669   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#11 6.884 Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 6.920   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.184 Collecting watchfiles>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.220   Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 7.494 Collecting websockets>=10.4 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.528   Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 7.624 Collecting requests>=2.18.4 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 7.658   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 7.728 Collecting websocket-client>=1.5.2 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 7.762   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 8.088 Collecting numpy>=1.22.4 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.120   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#11 8.169 Collecting python-dateutil>=2.8.2 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.201   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 8.276 Collecting pytz>=2020.1 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.309   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 8.359 Collecting tzdata>=2022.7 (from pandas->-r /app/requirements.txt (line 8))
+#11 8.391   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 8.733 Collecting greenlet>=1 (from sqlalchemy->-r /app/requirements.txt (line 9))
+#11 8.769   Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 8.859 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /app/requirements.txt (line 8))
+#11 8.903   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 9.083 Collecting charset_normalizer<4,>=2 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.117   Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+#11 9.201 Collecting urllib3<3,>=1.21.1 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.233   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 9.298 Collecting certifi>=2017.4.17 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.330   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+#11 9.421 Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+#11 9.464 Downloading pydantic-2.11.9-py3-none-any.whl (444 kB)
+#11 9.550 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+#11 9.729    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 11.5 MB/s  0:00:00
+#11 9.762 Downloading starlette-0.47.3-py3-none-any.whl (72 kB)
+#11 9.803 Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+#11 9.848 Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+#11 9.890 Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+#11 10.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 11.4 MB/s  0:00:01
+#11 11.01 Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#11 11.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 11.2 MB/s  0:00:00
+#11 11.33 Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#11 11.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 11.3 MB/s  0:00:00
+#11 11.65 Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+#11 11.70 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#11 11.73 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#11 11.78 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+#11 11.82 Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+#11 11.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 584.4/584.4 kB 10.7 MB/s  0:00:00
+#11 11.91 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 11.95 Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#11 12.02 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#11 12.06 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#11 13.54    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 11.4 MB/s  0:00:01
+#11 13.57 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 13.63 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+#11 13.66 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 13.74 Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#11 13.81    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 10.8 MB/s  0:00:00
+#11 13.84 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 13.88 Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+#11 13.93 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 13.98 Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+#11 14.02 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 14.06 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 14.09 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 14.13 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+#11 14.17 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 14.23 Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#11 14.57    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 11.4 MB/s  0:00:00
+#11 14.61 Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+#11 14.68 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 14.72 Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+#11 15.15 Building wheels for collected packages: ssi-fc-data
+#11 15.15   DEPRECATION: Building 'ssi-fc-data' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'ssi-fc-data'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+#11 15.15   Building wheel for ssi-fc-data (setup.py): started
+#11 15.57   Building wheel for ssi-fc-data (setup.py): finished with status 'done'
+#11 15.57   Created wheel for ssi-fc-data: filename=ssi_fc_data-2.2.2-py3-none-any.whl size=16374 sha256=0ebaa36563b02905d4a8ab65010e98c8156df549f6c19db5ab6c7bd5de4cbe63
+#11 15.57   Stored in directory: /root/.cache/pip/wheels/7c/3b/6b/354db34eb5ce38cff6b53d401b08773ede2b81c867ced1474f
+#11 15.57 Successfully built ssi-fc-data
+#11 15.82 Installing collected packages: pytz, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, sniffio, six, pyyaml, python-dotenv, psycopg2-binary, orjson, numpy, idna, httptools, h11, greenlet, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, sqlalchemy, requests, python-dateutil, pydantic-core, exceptiongroup, ssi-fc-data, pydantic, pandas, anyio, watchfiles, starlette, fastapi
+#11 25.05 
+#11 25.06 Successfully installed annotated-types-0.7.0 anyio-4.10.0 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.2.1 exceptiongroup-1.3.0 fastapi-0.116.1 greenlet-3.2.4 h11-0.16.0 httptools-0.6.4 idna-3.10 numpy-2.2.6 orjson-3.11.3 pandas-2.3.2 psycopg2-binary-2.9.10 pydantic-2.11.9 pydantic-core-2.33.2 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 ssi-fc-data-2.2.2 starlette-0.47.3 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchfiles-1.1.0 websocket-client-1.8.0 websockets-15.0.1
+#11 25.06 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 25.7s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.8s done
+#12 writing image sha256:c117f1de64ff4ad04b75a020e9239d5fc1fa897d28b1cd49be412a63e140b301 done
+#12 naming to docker.io/library/fastapi_websocket-eboarddb done
+#12 DONE 3.8s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ eboarddb  Built
+ Container eboarddb  Recreate
+ Container eboarddb  Recreated
+ Container eboarddb  Starting
+ Container eboarddb  Started
+time="2025-09-15T12:59:12+07:00" level=warning msg="/www/server/FastAPI_Websocket/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 393B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 577B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 4.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730
+#5 resolve docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 538.70kB 0.0s done
+#6 DONE 0.0s
+
+#7 [2/6] RUN apt-get update && apt-get install -y tzdata     && ln -snf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime     && echo "Asia/Ho_Chi_Minh" > /etc/timezone     && apt-get clean
+#7 CACHED
+
+#8 [3/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] COPY . /app
+#9 DONE 0.0s
+
+#10 [5/6] RUN pip install --upgrade pip
+#10 2.158 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+#10 2.470 Collecting pip
+#10 2.677   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+#10 2.928      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 7.1 MB/s eta 0:00:00
+#10 3.034 Installing collected packages: pip
+#10 3.034   Attempting uninstall: pip
+#10 3.035     Found existing installation: pip 23.0.1
+#10 3.251     Uninstalling pip-23.0.1:
+#10 3.498       Successfully uninstalled pip-23.0.1
+#10 4.503 Successfully installed pip-25.2
+#10 4.503 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 4.9s
+
+#11 [6/6] RUN pip install -r /app/requirements.txt
+#11 1.116 Collecting fastapi (from -r /app/requirements.txt (line 1))
+#11 1.293   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+#11 1.604 Collecting ssi-fc-data (from -r /app/requirements.txt (line 5))
+#11 1.656   Downloading ssi_fc_data-2.2.2.tar.gz (11 kB)
+#11 1.697   Preparing metadata (setup.py): started
+#11 2.386   Preparing metadata (setup.py): finished with status 'done'
+#11 2.624 Collecting pandas (from -r /app/requirements.txt (line 8))
+#11 2.666   Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+#11 3.461 Collecting sqlalchemy (from -r /app/requirements.txt (line 9))
+#11 3.509   Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#11 3.781 Collecting psycopg2-binary (from -r /app/requirements.txt (line 10))
+#11 3.825   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 4.392 Collecting orjson (from -r /app/requirements.txt (line 11))
+#11 4.439   Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 4.560 Collecting uvicorn[standard] (from -r /app/requirements.txt (line 2))
+#11 4.604   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+#11 4.684 Collecting starlette<0.48.0,>=0.40.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.727   Downloading starlette-0.47.3-py3-none-any.whl.metadata (6.2 kB)
+#11 5.064 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r /app/requirements.txt (line 1))
+#11 5.108   Downloading pydantic-2.11.9-py3-none-any.whl.metadata (68 kB)
+#11 5.184 Collecting typing-extensions>=4.8.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 5.227   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 5.269 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 5.327   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#11 6.542 Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.585   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 6.632 Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 6.675   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+#11 6.737 Collecting anyio<5,>=3.6.2 (from starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.779   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+#11 6.850 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.893   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+#11 6.945 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 6.988   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#11 7.034 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 7.077   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 7.147 Collecting click>=7.0 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.189   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#11 7.233 Collecting h11>=0.8 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.277   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 7.368 Collecting httptools>=0.6.3 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.412   Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#11 7.478 Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.527   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+#11 7.645 Collecting pyyaml>=5.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.689   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#11 7.848 Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.892   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 8.064 Collecting watchfiles>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.108   Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 8.357 Collecting websockets>=10.4 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.401   Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 8.498 Collecting requests>=2.18.4 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.542   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 8.616 Collecting websocket-client>=1.5.2 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 8.659   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 9.048 Collecting numpy>=1.22.4 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.093   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#11 9.150 Collecting python-dateutil>=2.8.2 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.193   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 9.279 Collecting pytz>=2020.1 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.322   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 9.371 Collecting tzdata>=2022.7 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.413   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 9.724 Collecting greenlet>=1 (from sqlalchemy->-r /app/requirements.txt (line 9))
+#11 9.769   Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 9.838 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /app/requirements.txt (line 8))
+#11 9.881   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 10.12 Collecting charset_normalizer<4,>=2 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 10.16   Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+#11 10.27 Collecting urllib3<3,>=1.21.1 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 10.32   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 10.39 Collecting certifi>=2017.4.17 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 10.43   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+#11 10.55 Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+#11 10.61 Downloading pydantic-2.11.9-py3-none-any.whl (444 kB)
+#11 10.72 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+#11 10.96    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 8.3 MB/s  0:00:00
+#11 11.00 Downloading starlette-0.47.3-py3-none-any.whl (72 kB)
+#11 11.05 Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+#11 11.10 Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+#11 11.15 Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+#11 12.61    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 8.4 MB/s  0:00:01
+#11 12.65 Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#11 13.08    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 7.5 MB/s  0:00:00
+#11 13.13 Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#11 13.61    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 6.5 MB/s  0:00:00
+#11 13.65 Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+#11 13.72 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#11 13.77 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#11 13.83 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+#11 13.88 Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+#11 13.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 584.4/584.4 kB 6.5 MB/s  0:00:00
+#11 14.01 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 14.07 Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#11 14.18 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#11 14.24 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#11 16.83    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 6.5 MB/s  0:00:02
+#11 16.87 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 16.94 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+#11 16.99 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 17.10 Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#11 17.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 6.5 MB/s  0:00:00
+#11 17.26 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 17.34 Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+#11 17.42 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 17.49 Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+#11 17.55 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 17.60 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 17.64 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 17.70 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+#11 17.74 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 17.85 Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#11 18.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 7.1 MB/s  0:00:00
+#11 18.43 Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+#11 18.54 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 18.60 Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+#11 18.86 Building wheels for collected packages: ssi-fc-data
+#11 18.86   DEPRECATION: Building 'ssi-fc-data' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'ssi-fc-data'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+#11 18.86   Building wheel for ssi-fc-data (setup.py): started
+#11 19.58   Building wheel for ssi-fc-data (setup.py): finished with status 'done'
+#11 19.58   Created wheel for ssi-fc-data: filename=ssi_fc_data-2.2.2-py3-none-any.whl size=16374 sha256=70f610ebda7193007ebe42335ef0e61699378e7c7207eec1b8e95e7f0592b668
+#11 19.58   Stored in directory: /root/.cache/pip/wheels/7c/3b/6b/354db34eb5ce38cff6b53d401b08773ede2b81c867ced1474f
+#11 19.59 Successfully built ssi-fc-data
+#11 19.80 Installing collected packages: pytz, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, sniffio, six, pyyaml, python-dotenv, psycopg2-binary, orjson, numpy, idna, httptools, h11, greenlet, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, sqlalchemy, requests, python-dateutil, pydantic-core, exceptiongroup, ssi-fc-data, pydantic, pandas, anyio, watchfiles, starlette, fastapi
+#11 31.60 
+#11 31.61 Successfully installed annotated-types-0.7.0 anyio-4.10.0 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.2.1 exceptiongroup-1.3.0 fastapi-0.116.1 greenlet-3.2.4 h11-0.16.0 httptools-0.6.4 idna-3.10 numpy-2.2.6 orjson-3.11.3 pandas-2.3.2 psycopg2-binary-2.9.10 pydantic-2.11.9 pydantic-core-2.33.2 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 ssi-fc-data-2.2.2 starlette-0.47.3 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchfiles-1.1.0 websocket-client-1.8.0 websockets-15.0.1
+#11 31.61 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 32.1s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.7s done
+#12 writing image sha256:031b5e9c2edba80ed05f4a068c501d652ceeb7ef5115d1a30c9e18e46638d6e0 done
+#12 naming to docker.io/library/fastapi_websocket-eboarddb done
+#12 DONE 3.7s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ eboarddb  Built
+ Container eboarddb  Recreate
+ Container eboarddb  Recreated
+ Container eboarddb  Starting
+ Container eboarddb  Started
+time="2025-09-16T08:58:03+07:00" level=warning msg="/www/server/FastAPI_Websocket/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 393B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 577B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 10.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730
+#5 resolve docker.io/library/python:3.10-slim@sha256:f8081b61393cc16b2339d377bb523a5646cdd28fc6105612b3893c405d27f730 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 555.15kB 0.0s done
+#6 DONE 0.0s
+
+#7 [2/6] RUN apt-get update && apt-get install -y tzdata     && ln -snf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime     && echo "Asia/Ho_Chi_Minh" > /etc/timezone     && apt-get clean
+#7 CACHED
+
+#8 [3/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] COPY . /app
+#9 DONE 0.0s
+
+#10 [5/6] RUN pip install --upgrade pip
+#10 1.989 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+#10 2.313 Collecting pip
+#10 2.500   Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+#10 2.740      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 7.4 MB/s eta 0:00:00
+#10 2.813 Installing collected packages: pip
+#10 2.813   Attempting uninstall: pip
+#10 2.813     Found existing installation: pip 23.0.1
+#10 3.031     Uninstalling pip-23.0.1:
+#10 3.238       Successfully uninstalled pip-23.0.1
+#10 4.327 Successfully installed pip-25.2
+#10 4.327 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 9.7s
+
+#11 [6/6] RUN pip install -r /app/requirements.txt
+#11 1.085 Collecting fastapi (from -r /app/requirements.txt (line 1))
+#11 1.221   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+#11 1.619 Collecting ssi-fc-data (from -r /app/requirements.txt (line 5))
+#11 1.656   Downloading ssi_fc_data-2.2.2.tar.gz (11 kB)
+#11 1.695   Preparing metadata (setup.py): started
+#11 2.377   Preparing metadata (setup.py): finished with status 'done'
+#11 2.673 Collecting pandas (from -r /app/requirements.txt (line 8))
+#11 2.707   Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+#11 3.531 Collecting sqlalchemy (from -r /app/requirements.txt (line 9))
+#11 3.580   Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#11 3.865 Collecting psycopg2-binary (from -r /app/requirements.txt (line 10))
+#11 3.901   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 4.529 Collecting orjson (from -r /app/requirements.txt (line 11))
+#11 4.563   Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 4.743 Collecting uvicorn[standard] (from -r /app/requirements.txt (line 2))
+#11 4.777   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+#11 4.917 Collecting starlette<0.48.0,>=0.40.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 4.962   Downloading starlette-0.47.3-py3-none-any.whl.metadata (6.2 kB)
+#11 5.401 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r /app/requirements.txt (line 1))
+#11 5.467   Downloading pydantic-2.11.9-py3-none-any.whl.metadata (68 kB)
+#11 5.558 Collecting typing-extensions>=4.8.0 (from fastapi->-r /app/requirements.txt (line 1))
+#11 5.592   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 5.661 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 5.696   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#11 7.080 Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 7.115   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 7.176 Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r /app/requirements.txt (line 1))
+#11 7.209   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+#11 7.291 Collecting anyio<5,>=3.6.2 (from starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 7.328   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+#11 7.424 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 7.465   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+#11 7.545 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 7.579   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#11 7.645 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.48.0,>=0.40.0->fastapi->-r /app/requirements.txt (line 1))
+#11 7.681   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 7.794 Collecting click>=7.0 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.841   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#11 7.908 Collecting h11>=0.8 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 7.943   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 8.086 Collecting httptools>=0.6.3 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.122   Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#11 8.205 Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.240   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+#11 8.370 Collecting pyyaml>=5.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.403   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#11 8.595 Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.629   Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 8.818 Collecting watchfiles>=0.13 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 8.851   Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 9.072 Collecting websockets>=10.4 (from uvicorn[standard]->-r /app/requirements.txt (line 2))
+#11 9.106   Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 9.192 Collecting requests>=2.18.4 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.224   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 9.297 Collecting websocket-client>=1.5.2 (from ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 9.330   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 9.767 Collecting numpy>=1.22.4 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.801   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#11 9.869 Collecting python-dateutil>=2.8.2 (from pandas->-r /app/requirements.txt (line 8))
+#11 9.901   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 10.00 Collecting pytz>=2020.1 (from pandas->-r /app/requirements.txt (line 8))
+#11 10.04   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 10.10 Collecting tzdata>=2022.7 (from pandas->-r /app/requirements.txt (line 8))
+#11 10.13   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 10.59 Collecting greenlet>=1 (from sqlalchemy->-r /app/requirements.txt (line 9))
+#11 10.62   Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 10.71 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /app/requirements.txt (line 8))
+#11 10.75   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 10.96 Collecting charset_normalizer<4,>=2 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 11.00   Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+#11 11.09 Collecting urllib3<3,>=1.21.1 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 11.13   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 11.20 Collecting certifi>=2017.4.17 (from requests>=2.18.4->ssi-fc-data->-r /app/requirements.txt (line 5))
+#11 11.23   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+#11 11.33 Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+#11 11.38 Downloading pydantic-2.11.9-py3-none-any.whl (444 kB)
+#11 11.53 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+#11 11.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 9.9 MB/s  0:00:00
+#11 11.77 Downloading starlette-0.47.3-py3-none-any.whl (72 kB)
+#11 11.81 Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+#11 11.86 Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+#11 11.90 Downloading pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+#11 13.08    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 10.5 MB/s  0:00:01
+#11 13.11 Downloading sqlalchemy-2.0.43-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#11 13.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 10.4 MB/s  0:00:00
+#11 13.45 Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#11 13.75    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 10.3 MB/s  0:00:00
+#11 13.78 Downloading orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+#11 13.83 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#11 13.87 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#11 13.92 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+#11 13.95 Downloading greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+#11 14.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 584.4/584.4 kB 10.4 MB/s  0:00:00
+#11 14.04 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 14.08 Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#11 14.15 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#11 14.19 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#11 15.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 11.2 MB/s  0:00:01
+#11 15.73 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 15.78 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+#11 15.82 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 15.91 Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+#11 15.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 7.9 MB/s  0:00:00
+#11 16.03 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 16.07 Downloading charset_normalizer-3.4.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+#11 16.11 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 16.16 Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+#11 16.21 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 16.24 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 16.27 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 16.31 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+#11 16.35 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 16.43 Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+#11 16.77    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 11.3 MB/s  0:00:00
+#11 16.81 Downloading watchfiles-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+#11 16.88 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 16.93 Downloading websockets-15.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+#11 17.20 Building wheels for collected packages: ssi-fc-data
+#11 17.21   DEPRECATION: Building 'ssi-fc-data' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'ssi-fc-data'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+#11 17.21   Building wheel for ssi-fc-data (setup.py): started
+#11 17.98   Building wheel for ssi-fc-data (setup.py): finished with status 'done'
+#11 17.98   Created wheel for ssi-fc-data: filename=ssi_fc_data-2.2.2-py3-none-any.whl size=16374 sha256=9aa04708ff75738dca688fd496e909477f8e91a9febfe992b8569248bdfbcd64
+#11 17.98   Stored in directory: /root/.cache/pip/wheels/7c/3b/6b/354db34eb5ce38cff6b53d401b08773ede2b81c867ced1474f
+#11 17.98 Successfully built ssi-fc-data
+#11 18.21 Installing collected packages: pytz, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, sniffio, six, pyyaml, python-dotenv, psycopg2-binary, orjson, numpy, idna, httptools, h11, greenlet, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, sqlalchemy, requests, python-dateutil, pydantic-core, exceptiongroup, ssi-fc-data, pydantic, pandas, anyio, watchfiles, starlette, fastapi
+#11 28.63 
+#11 28.64 Successfully installed annotated-types-0.7.0 anyio-4.10.0 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.2.1 exceptiongroup-1.3.0 fastapi-0.116.1 greenlet-3.2.4 h11-0.16.0 httptools-0.6.4 idna-3.10 numpy-2.2.6 orjson-3.11.3 pandas-2.3.2 psycopg2-binary-2.9.10 pydantic-2.11.9 pydantic-core-2.33.2 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 ssi-fc-data-2.2.2 starlette-0.47.3 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchfiles-1.1.0 websocket-client-1.8.0 websockets-15.0.1
+#11 28.64 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 29.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.8s done
+#12 writing image sha256:35551e7b583ed2f02e7db4a9e4cb36525935238230a01d41c612dca2b3578269 done
+#12 naming to docker.io/library/fastapi_websocket-eboarddb done
+#12 DONE 3.8s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ eboarddb  Built
+ Container eboarddb  Recreate
+ Container eboarddb  Recreated
+ Container eboarddb  Starting
+ Container eboarddb  Started

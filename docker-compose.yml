@@ -2,25 +2,25 @@ version: '3.9'
 
 services:
 
-  dashboardstream:
-    build: 
-        context: ./streaming/dashboard
-        dockerfile: Dockerfile
-    container_name: dashboardstream
-    ports:
-     - 17000:17000
-    network_mode: kafka_default  # dùng network host
+#   dashboardstream:
+#     build: 
+#         context: ./streaming/dashboard
+#         dockerfile: Dockerfile
+#     container_name: dashboardstream
+#     ports:
+#      - 17000:17000
+#     network_mode: kafka_default  # dùng network host
     #restart: always
     
-  dashboardwebsocket:
-    build: 
-        context: ./consumer/websocketDashboard
-        dockerfile: Dockerfile
-    container_name: dashboardwebsocket
-    ports:
-     - 8000:8000
-    network_mode: kafka_default  # dùng network host
-    restart: always
+#   dashboardwebsocket:
+#     build: 
+#         context: ./consumer/websocketDashboard
+#         dockerfile: Dockerfile
+#     container_name: dashboardwebsocket
+#     ports:
+#      - 8000:8000
+#     network_mode: kafka_default  # dùng network host
+#     restart: always
     
 #   dashboarddatabase:
 #     build:
@@ -37,7 +37,7 @@ services:
         dockerfile: Dockerfile
     container_name: eboarddb
     ports:
-     - 8000:8000
+     - 17500:8000
     network_mode: kafka_default  # dùng network host
     restart: always
  
