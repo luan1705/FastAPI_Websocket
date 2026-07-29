@@ -138,7 +138,7 @@ def save_redis_alert(msg: dict, tz_name: str = "Asia/Ho_Chi_Minh") -> bool:
         logging.warning(f"save_redis_alert: missing symbol in msg={msg}")
         return False
 
-    key = f"latest_message:{symbol}"
+    key = f"latest_ssi_stream_message:{symbol}"
     payload = json.dumps(msg, ensure_ascii=False)
 
     for attempt in range(1, 4):  # thử tối đa 3 lần

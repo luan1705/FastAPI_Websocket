@@ -87,9 +87,82 @@ engine = create_engine(
 # ==================================================
 # REDIS
 # ==================================================
-redis_pool   = redis.ConnectionPool.from_url(REDIS_URL, max_connections=30, decode_responses=False)
-redis_client = redis.Redis(connection_pool=redis_pool)
+redis_pool = None
+redis_client = None
+
+
+def create_redis():
+    global redis_pool
+
+    # clear pool cũ
+    if redis_pool:
+        try:
+            redis_pool.disconnect()
+        except Exception:
+            pass
+
+    redis_pool = redis.BlockingConnectionPool.from_url(
+        REDIS_URL,
+        decode_responses=True,
+
+        socket_timeout=5,
+        socket_connect_timeout=5,
+
+        retry_on_timeout=True,
+        health_check_interval=30,
+
+        max_connections=30,
+        timeout=1.0,
+    )
+
+    return redis.Redis(connection_pool=redis_pool)
+
+
+def reconnect_redis():
+    global redis_client
+
+    logging.warning("Reconnecting Redis...")
+
+    try:
+        redis_client = create_redis()
+
+        redis_client.ping()
+
+        logging.info("Redis reconnect OK")
+        return True
+
+    except Exception as e:
+        logging.error("Redis reconnect failed: %s", e)
+        return False
+
+def publish_redis(payload: dict, channel: str):
+    global redis_client
+
+    data = json.dumps(payload, default=str)
+
+    for attempt in range(1, 4):
+        try:
+            redis_client.publish(channel, data)
+            return True
+
+        except Exception as e:
+            logging.warning(
+                f"Redis publish fail ({channel}) attempt {attempt}/3: {e}"
+            )
+
+            if not reconnect_redis():
+                time.sleep(1)
+                continue
+
+            time.sleep(1)
+
+    logging.error(f"Redis publish give up ({channel})")
+    os._exit(1)
+
+# init lần đầu
+redis_client = create_redis()
 redis_client.ping()
+
 print("Connected Redis", flush=True)
 
 # ==================================================
@@ -256,10 +329,9 @@ def upsert_order_matching(symbol: str, data: dict):
             )
         # logging.info(f"[DB ✅] {symbol} @ {time_vn.strftime('%Y-%m-%d %H:%M:%S')}")
 
-    except Exception as e:
-        import traceback
-        logging.error(f"[DB ❌] {symbol}: {e}")
-        traceback.print_exc()   # in full stack trace ra stderr để không bỏ sót
+    except Exception:
+        logging.exception(f"[DB ❌] {symbol}")
+        os._exit(1)   # in full stack trace ra stderr để không bỏ sót
 
 # ==================================================
 # CALLBACK SSI
@@ -338,19 +410,22 @@ def on_message_X(message):
             "side":             data.get("Side"),
         }
 
-        # ── BƯỚC 6: Publish Redis (bỏ các key nội bộ _*) ──
-        redis_payload = {k: v for k, v in mapped_data.items() if not k.startswith("_")}
-        try:
-            redis_client.publish(REDIS_CHANNEL, json.dumps(redis_payload, default=str))
-        except Exception as re_err:
-            logging.error(f"[Redis ❌] {symbol}: {re_err}")
+        # ── BƯỚC 6: Publish Redis ──
+        redis_payload = {
+            k: v for k, v in mapped_data.items()
+            if not k.startswith("_")
+        }
 
-        # ── BƯỚC 7: Insert DB ──
         upsert_order_matching(symbol, mapped_data)
+
+        publish_redis(redis_payload, REDIS_CHANNEL)
+
+
+
 
     except Exception:
         logging.exception("❌ on_message_X unhandled error")
-
+        os._exit(1)
 
 RECONNECT = threading.Event()
 
@@ -366,14 +441,14 @@ def on_close():
 # STREAM WORKER
 # ==================================================
 def stream_worker():
-    retry_delay = 5
+    connectssi = MarketDataClient(config)
+
     while True:
         try:
             logging.info("🔌 Connecting to SSI data stream...")
-            connectssi = MarketDataClient(config)
+
             mm = MarketDataStream(config, connectssi)
 
-            RECONNECT.clear()
             mm.start(
                 on_message_X,
                 on_error,
@@ -382,27 +457,13 @@ def stream_worker():
             )
 
             woke = RECONNECT.wait(timeout=86400)
+
             if woke:
-                logging.warning("🔁 RECONNECT triggered")
                 RECONNECT.clear()
 
-            retry_delay = 5   # reset sau khi kết nối thành công
-
-        except (requests.exceptions.ConnectTimeout, requests.exceptions.ReadTimeout):
-            logging.error("⏱ Timeout kết nối SSI")
-            retry_delay = min(retry_delay * 2, 60)
-        except requests.exceptions.SSLError:
-            logging.error("⚠️ SSL Error SSI")
-            retry_delay = min(retry_delay * 2, 60)
-        except requests.exceptions.ConnectionError:
-            logging.error("❌ Mất kết nối SSI")
-            retry_delay = min(retry_delay * 2, 60)
         except Exception as e:
-            logging.error(f"❌ Stream crashed: {e}", exc_info=True)
-            retry_delay = min(retry_delay * 2, 60)
-
-        logging.info(f"🔁 Reconnecting in {retry_delay}s...")
-        time.sleep(retry_delay)
+            logging.error("Stream crashed: %s", e)
+            time.sleep(1)
 
 # ==================================================
 # MAIN
