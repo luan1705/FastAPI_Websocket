@@ -149,7 +149,7 @@ def save_redis_alert(msg: dict, tz_name: str = "Asia/Ho_Chi_Minh") -> bool:
             logging.warning("Redis SET fail attempt %d/3: %s", attempt, e)
             if attempt == 2:
                 try:
-                    notify(f"⚠️ [{GROUP_KEY}] Redis publish fail ({channel}) attempt 2/3", level="warning")
+                    notify(f"⚠️ [{GROUP_KEY}] Redis publish fail attempt 2/3", level="warning")
                 except Exception:
                     pass
             reconnect_redis()
@@ -234,7 +234,12 @@ def on_message_X(message):
 RECONNECT = threading.Event()
 
 def on_error(err):
-    logging.error(f"X stream error: {err}")
+    error_text = str(err)
+    logging.error("X stream error: %s", error_text)
+
+    if "server busy" in str(err).lower():
+        os._exit(1)
+
     RECONNECT.set()
 
 def on_close():
@@ -260,7 +265,7 @@ def main():
 
         except Exception as e:
             logging.error("Stream crashed: %s", e)
-            time.sleep(1)
+            time.sleep(3)
 
 if __name__ == "__main__":
     main()

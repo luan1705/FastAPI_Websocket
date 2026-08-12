@@ -403,3 +403,73 @@ sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to serve
 2026-07-29 08:30:02,587 [INFO] ✅ UPCOMINDEX -> refPoint=125.74
 2026-07-29 08:30:02,590 [INFO] ✅ Hoàn thành tạo file refpoint.py.
 2026-07-29 08:30:02,591 [INFO] 🔒 Đã đóng kết nối DB
+2026-07-30 08:30:02,049 [INFO] ✅ HNX30 -> refPoint=449.14
+2026-07-30 08:30:02,051 [INFO] ✅ UPCOMINDEX -> refPoint=126.15
+2026-07-30 08:30:02,050 [INFO] ✅ HNXINDEX -> refPoint=271.68
+2026-07-30 08:30:02,053 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-07-30 08:30:02,053 [INFO] 🔒 Đã đóng kết nối DB
+2026-07-31 08:30:02,097 [INFO] ✅ UPCOMINDEX -> refPoint=126.5
+2026-07-31 08:30:02,098 [INFO] ✅ HNXINDEX -> refPoint=275.05
+2026-07-31 08:30:02,099 [INFO] ✅ HNX30 -> refPoint=459.36
+2026-07-31 08:30:02,101 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-07-31 08:30:02,102 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-01 08:30:02,970 [INFO] ✅ UPCOMINDEX -> refPoint=126.59
+2026-08-01 08:30:02,973 [INFO] ✅ HNX30 -> refPoint=453.35
+2026-08-01 08:30:02,972 [INFO] ✅ HNXINDEX -> refPoint=271.25
+2026-08-01 08:30:02,975 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-01 08:30:02,976 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-02 08:30:03,302 [INFO] ✅ UPCOMINDEX -> refPoint=126.59
+2026-08-02 08:30:03,303 [INFO] ✅ HNX30 -> refPoint=453.35
+2026-08-02 08:30:03,317 [INFO] ✅ HNXINDEX -> refPoint=271.25
+2026-08-02 08:30:03,319 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-02 08:30:03,320 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-03 08:30:02,575 [INFO] ✅ UPCOMINDEX -> refPoint=126.59
+2026-08-03 08:30:02,579 [INFO] ✅ HNX30 -> refPoint=453.35
+2026-08-03 08:30:02,581 [INFO] ✅ HNXINDEX -> refPoint=271.25
+2026-08-03 08:30:02,582 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-03 08:30:02,583 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-04 08:30:02,863 [INFO] ✅ HNX30 -> refPoint=460.04
+2026-08-04 08:30:02,866 [INFO] ✅ HNXINDEX -> refPoint=279.28
+2026-08-04 08:30:02,864 [INFO] ✅ UPCOMINDEX -> refPoint=126.67
+2026-08-04 08:30:02,868 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-04 08:30:02,869 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-05 08:30:02,196 [INFO] ✅ UPCOMINDEX -> refPoint=127.2
+2026-08-05 08:30:02,198 [INFO] ✅ HNXINDEX -> refPoint=286.41
+2026-08-05 08:30:02,202 [INFO] ✅ HNX30 -> refPoint=461.07
+2026-08-05 08:30:02,203 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-05 08:30:02,204 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-06 08:30:02,533 [INFO] ✅ UPCOMINDEX -> refPoint=127.15
+2026-08-06 08:30:02,535 [INFO] ✅ HNXINDEX -> refPoint=293.59
+2026-08-06 08:30:02,536 [INFO] ✅ HNX30 -> refPoint=458.94
+2026-08-06 08:30:02,537 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-06 08:30:02,538 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-07 08:30:02,026 [INFO] ✅ HNXINDEX -> refPoint=292.64
+2026-08-07 08:30:02,030 [INFO] ✅ HNX30 -> refPoint=453.19
+2026-08-07 08:30:02,032 [INFO] ✅ UPCOMINDEX -> refPoint=126.82
+2026-08-07 08:30:02,033 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-07 08:30:02,034 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-08 08:30:03,032 [INFO] ✅ UPCOMINDEX -> refPoint=126.88
+2026-08-08 08:30:03,033 [INFO] ✅ HNXINDEX -> refPoint=293.44
+2026-08-08 08:30:03,051 [INFO] ✅ HNX30 -> refPoint=455.12
+2026-08-08 08:30:03,052 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-08 08:30:03,053 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-09 08:30:02,123 [INFO] ✅ HNXINDEX -> refPoint=293.44
+2026-08-09 08:30:02,124 [INFO] ✅ HNX30 -> refPoint=455.12
+2026-08-09 08:30:02,125 [INFO] ✅ UPCOMINDEX -> refPoint=126.88
+2026-08-09 08:30:02,128 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-09 08:30:02,129 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-10 08:30:02,430 [INFO] ✅ UPCOMINDEX -> refPoint=126.88
+2026-08-10 08:30:02,434 [INFO] ✅ HNXINDEX -> refPoint=293.44
+2026-08-10 08:30:02,437 [INFO] ✅ HNX30 -> refPoint=455.12
+2026-08-10 08:30:02,438 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-10 08:30:02,439 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-11 08:30:02,345 [INFO] ✅ UPCOMINDEX -> refPoint=127.32
+2026-08-11 08:30:02,348 [INFO] ✅ HNXINDEX -> refPoint=287.68
+2026-08-11 08:30:02,346 [INFO] ✅ HNX30 -> refPoint=464.27
+2026-08-11 08:30:02,349 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-11 08:30:02,350 [INFO] 🔒 Đã đóng kết nối DB
+2026-08-12 08:30:02,764 [INFO] ✅ HNXINDEX -> refPoint=290.91
+2026-08-12 08:30:02,765 [INFO] ✅ UPCOMINDEX -> refPoint=127.18
+2026-08-12 08:30:02,767 [INFO] ✅ HNX30 -> refPoint=463.65
+2026-08-12 08:30:02,769 [INFO] ✅ Hoàn thành tạo file refpoint.py.
+2026-08-12 08:30:02,769 [INFO] 🔒 Đã đóng kết nối DB
